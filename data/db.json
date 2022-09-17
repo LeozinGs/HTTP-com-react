@@ -1,34 +1,19 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "name": "Camisa",
-            "price": 59.9
-        },
-        {
-            "id": 2,
-            "name": "Calça vermelha",
-            "price": 90
-        },
-        {
-            "id": 3,
-            "name": "Boné aba reta",
-            "price": 29.9
-        },
-        {
-            "name": "fone de ouvido",
-            "price": "55",
-            "id": 4
-        },
-        {
-            "name": "tenis da miz",
-            "price": "100",
-            "id": 5
-        },
-        {
-            "name": "tenis do leozin",
-            "price": "35",
-            "id": 6
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Camisa",
+      "price": 59.9
+    },
+    {
+      "id": 2,
+      "name": "Calça vermelha",
+      "price": 90
+    },
+    {
+      "id": 3,
+      "name": "Boné aba reta",
+      "price": 29.9
+    }
+  ]
 }
