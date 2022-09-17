@@ -6,14 +6,14 @@
       "price": 59.9
     },
     {
-      "id": 2,
-      "name": "Calça vermelha",
-      "price": 90
+      "name": "Boné aba reta",
+      "price": "54",
+      "id": 2
     },
     {
-      "id": 3,
-      "name": "Boné aba reta",
-      "price": 29.9
+      "name": "Calça Vermelha",
+      "price": "63",
+      "id": 3
     }
   ]
 }

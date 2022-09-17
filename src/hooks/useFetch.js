@@ -16,6 +16,9 @@ export const useFetch = (url) => {
     // 8 - Tratando erros
     const [error, setError] = useState(null)
 
+    // 9 - Desafio 6 (Deletando objetos do json)
+    const [itemId, setItemId] = useState(null)
+
 
     const httpConfig = (data, method) => {
         if (method === "POST") {
@@ -27,6 +30,15 @@ export const useFetch = (url) => {
                 body: JSON.stringify(data)
             })
             setMethod(method)
+        } else if (method === "DELETE") {
+            setConfig({
+                method,
+                headers: {
+                    "Content-type": "application/json"
+                }
+            })
+            setMethod(method)
+            setItemId(data)
         }
     }
 
@@ -59,16 +71,26 @@ export const useFetch = (url) => {
     // 5 - Refatorando POST
     useEffect(() => {
         const httpRequest = async () => {
+
+            let json
+
             if (method === "POST") {
 
                 let fetchOptions = [url, config]
 
                 const res = await fetch(...fetchOptions)
 
-                const json = await res.json()
+                json = await res.json()
 
-                setCallFetch(json)
+            } else if (method === "DELETE") {
+                const deleteUrl = `${url}/${itemId}`
+
+                const res = await fetch(deleteUrl, config)
+
+                json = await res.json()
+
             }
+            setCallFetch(json)
         }
 
         httpRequest()

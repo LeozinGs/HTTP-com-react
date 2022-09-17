@@ -89,6 +89,10 @@ function App() {
     return Number.parseFloat(x).toFixed(2)
   }
 
+  // 9 - Desafio 6 (Deletar produto do json)
+  const handleRemove = (id) => {
+    httpConfig(id, "DELETE")
+  }
 
   return (
     <div className="App">
@@ -101,6 +105,7 @@ function App() {
           {/* mudando o map de {products para um if que verifica se os items do custom hook contem realmente os items do db.json} */}
           {items && items.map((product) => (
             <li key={product.id}>{product.name} - R$: {financial(product.price)}
+              <button onClick={() => handleRemove(product.id)}>Deletar</button>
             </li>
           ))}
         </ul>}
